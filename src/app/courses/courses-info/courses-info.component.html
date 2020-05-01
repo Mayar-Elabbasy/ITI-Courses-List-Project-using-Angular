@@ -1,0 +1,21 @@
+<div *ngIf="course else noCourseTemplate">
+  <h3 class="bg-info p-2 rounded-pill text-center"> Course Number:{{course.id}} Details</h3>
+  <hr class="bg-dark">
+    <div>
+        <br>
+        <h5>ID: #{{course.id}}</h5>
+        <br>
+        <h5>Title: {{course.title}}</h5>
+        <br>
+        <h5>Instructor: {{course.instructor}}</h5>
+        <br>
+        <h5>Avaliable: {{course.isAvailabel}}</h5>
+    </div>
+</div>
+<ng-template #noCourseTemplate>
+  <p>
+    No Course Selected
+  </p>
+</ng-template>
+
+

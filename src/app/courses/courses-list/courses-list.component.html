@@ -1,0 +1,29 @@
+<h3 class="bg-info p-2 rounded-pill text-center">Courses List</h3>
+<hr class="bg-dark">
+      
+<p *ngIf="clickedCourseTitle">  course {{clickedCourseTitle}} is clicked </p>
+<ul class="list-group text-center">
+    <!-- before course <app-courses-item *ngFor="let course of courses" [title]="course.title" [ins]="course.instructor"
+        [isAvailable]="course.isAvailable" (courseClick)="onCourseClick($event)"
+        (click)="onCourseItemClick(course)"> -->
+  <app-courses-item *ngFor="let course of courses" [courseData]="course" (courseClick)="onCourseClick($event)"
+        (click)="onCourseItemClick(course)">
+      </app-courses-item>  
+</ul>
+     
+<div class="container-fluid m-3">
+<div class="row">
+      <div class="col-4 m-3">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li *ngFor="let page of pages; index as i" class="page-item"
+            [ngClass]="{active: currentPage == i + 1 }"
+              [routerLink]="['/courses']" [queryParams]="{page: i+1}" queryParamsHandling='merge'>
+              <a class="page-link">
+                {{i + 1}}
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+</div>

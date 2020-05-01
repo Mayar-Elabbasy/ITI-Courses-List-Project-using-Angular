@@ -1,0 +1,6 @@
+ul li :hover{
+  background-color: rgba(0, 0, 255, 0.623); 
+  color: aqua; 
+  border-radius: 20px;
+  padding: 10px;
+}

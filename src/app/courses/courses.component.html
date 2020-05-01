@@ -1,0 +1,35 @@
+<div class="container main">
+    <h2 class="bg-info p-2 rounded-pill text-center"> Courses</h2>
+    <div class="row">
+        <div class="col-6">
+                <div>
+                    <button class="btn btn-danger p-2 float-right m-2"
+                    [routerLink]="['/courses/new']" type="button">New Course</button>
+               
+                
+                    <select name="limit" id="limit" class="btn btn-primary float-right p-2 m-2"
+                    (change)="onLimitChange($event)">
+                      <option value="10">Default</option>
+                      <option value="1">1</option>
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
+                    </select>
+                </div>    
+        </div>
+        
+    </div>
+        <div class="row m-4">
+            <div class="col-6 p-4 rounded">
+                <app-courses-list></app-courses-list>
+            </div>
+            
+            <div class="col-6 p-4 rounded">
+                <app-courses-info></app-courses-info>
+            </div>
+        </div>
+        
+        
+</div>
+
+  

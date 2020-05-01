@@ -1,0 +1,11 @@
+.main{
+    display: block;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 50%;
+    border: 5px solid lightskyblue;
+    padding: 15px;  
+    background-color: lightcyan;
+  }
+ 
+  
